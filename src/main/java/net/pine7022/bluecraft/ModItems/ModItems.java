@@ -1,9 +1,10 @@
-package net.pine7022.bluecraft;
+package net.pine7022.bluecraft.ModItems;
 
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.pine7022.bluecraft.BlueCraft;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(BlueCraft.MODID);
@@ -15,7 +16,7 @@ public class ModItems {
     public static final DeferredItem<Item> TICKET = ITEMS.register("ticket",
             () -> new Item(new Item.Properties()));
 
-    ublic static final DeferredItem<Item> WRENCH = ITEMS.register("wrench",
+    public static final DeferredItem<Item> WRENCH = ITEMS.register("wrench",
             () -> new Item(new Item.Properties()));
 
 
