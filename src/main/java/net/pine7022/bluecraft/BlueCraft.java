@@ -1,6 +1,7 @@
 package net.pine7022.bluecraft;
 
-import net.pine7022.bluecraft.ModItems.ModItems;
+import net.pine7022.bluecraft.item.ModItems;
+import net.pine7022.bluecraft.block.ModBlocks;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -45,6 +46,7 @@ public class BlueCraft
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.ITEMS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -70,8 +72,13 @@ public class BlueCraft
     {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.BLUESTONE);
-            event.accept(ModItems.TICKET);
             event.accept(ModItems.WRENCH);
+            event.accept(ModItems.TICKET);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.BLUESTONE_BLOCK);
+            event.accept(ModBlocks.BLUESTONE_ORE);
         }
     }
 

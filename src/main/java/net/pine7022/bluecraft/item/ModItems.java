@@ -9,9 +9,15 @@ import net.pine7022.bluecraft.BlueCraft;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(BlueCraft.MODID);
 
-    public static final DeferredItem<Item> BLUEGEM = ITEMS.register("bluegem",
+    //アイテム追加(ブルーストーン)
+    public static final DeferredItem<Item> BLUESTONE = ITEMS.register("bluestone",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> TICKET = ITEMS.register("ticket",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> WRENCH = ITEMS.register("wrench",
+            () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

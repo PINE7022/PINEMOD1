@@ -1,5 +1,7 @@
 {
   "item.bluecraft.bluestone": "ブルーストーン",
   "item.bluecraft.ticket": "チケット",
-  "item.bluecraft.wrench": "レンチ"
+  "item.bluecraft.wrench": "レンチ",
+  "block.bluecraft.bluestone_block": "ブルーストーンブロック",
+  "block.bluecraft.bluestone_ore": "ブルーストーン鉱石"
 }
