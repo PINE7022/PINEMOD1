@@ -2,6 +2,10 @@
   "item.bluecraft.bluestone": "ブルーストーン",
   "item.bluecraft.ticket": "チケット",
   "item.bluecraft.wrench": "レンチ",
+
   "block.bluecraft.bluestone_block": "ブルーストーンブロック",
-  "block.bluecraft.bluestone_ore": "ブルーストーン鉱石"
+  "block.bluecraft.bluestone_ore": "ブルーストーン鉱石",
+
+  "creativetab.bluecraft.bluecraft_items": "ブルークラフト アイテム",
+  "creativetab.bluecraft.bluecraft_blocks": "ブルークラフト ブロック"
 }

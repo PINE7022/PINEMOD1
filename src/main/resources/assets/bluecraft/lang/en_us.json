@@ -2,6 +2,10 @@
     "item.bluecraft.bluestone": "BlueStone",
     "item.bluecraft.ticket": "Ticket",
     "item.bluecraft.wrench": "Wrench",
+
     "block.bluecraft.bluestone_block": "Block of BlueStone",
-    "block.bluecraft.bluestone_ore": "BlueStone Ore"
+    "block.bluecraft.bluestone_ore": "BlueStone Ore",
+
+    "creativetab.bluecraft.bluecraft_items": "BlueCraft Items",
+    "creativetab.bluecraft.bluecraft_blocks": "BlueCraft Blocks"
 }
