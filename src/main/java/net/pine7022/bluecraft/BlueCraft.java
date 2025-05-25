@@ -1,5 +1,6 @@
 package net.pine7022.bluecraft;
 
+import net.pine7022.bluecraft.entity.ModEntities;
 import net.pine7022.bluecraft.item.ModCreativeModeTabs;
 import net.pine7022.bluecraft.item.ModItems;
 import net.pine7022.bluecraft.block.ModBlocks;
@@ -50,6 +51,7 @@ public class BlueCraft
         ModBlocks.BLOCKS.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+        ModEntities.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
