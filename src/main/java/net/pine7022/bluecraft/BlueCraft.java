@@ -1,6 +1,9 @@
 package net.pine7022.bluecraft;
 
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.pine7022.bluecraft.entity.ModEntities;
+import net.pine7022.bluecraft.entity.client.RaiRenderer;
 import net.pine7022.bluecraft.item.ModCreativeModeTabs;
 import net.pine7022.bluecraft.item.ModItems;
 import net.pine7022.bluecraft.block.ModBlocks;
@@ -97,11 +100,10 @@ public class BlueCraft
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.RAI.get(), RaiRenderer::new);
         }
     }
 }
