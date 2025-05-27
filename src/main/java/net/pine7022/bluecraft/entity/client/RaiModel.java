@@ -16,6 +16,8 @@ public class RaiModel<T extends RaiEntity> extends HierarchicalModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(BlueCraft.MODID, "rai"), "main");
     private ModelPart body;
     private ModelPart head;
+    private ModelPart Right_Leg;
+    private ModelPart Left_Leg;
 
     public RaiModel(ModelPart root) {
         this.body = root.getChild("body");

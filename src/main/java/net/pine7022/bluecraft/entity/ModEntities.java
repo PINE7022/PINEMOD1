@@ -16,7 +16,7 @@ public class ModEntities {
 
 
     public static final Supplier<EntityType<RaiEntity>> RAI =
-            ENTITY_TYPES.register("Rai", () -> EntityType.Builder.of(RaiEntity::new, MobCategory.CREATURE)
+            ENTITY_TYPES.register("rai", () -> EntityType.Builder.of(RaiEntity::new, MobCategory.CREATURE)
                     .sized(0.85f,1.35f).build("rai"));
 
 

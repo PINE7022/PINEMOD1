@@ -28,7 +28,7 @@ public class RaiEntity extends AbstractGolem implements RangedAttackMob {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Mob.createMobAttributes()
-                .add(Attributes.MOVEMENT_SPEED, 10)
+                .add(Attributes.MAX_HEALTH, 10)
                 .add(Attributes.MOVEMENT_SPEED, 0F);
     }
 
@@ -36,11 +36,19 @@ public class RaiEntity extends AbstractGolem implements RangedAttackMob {
     public void performRangedAttack(LivingEntity target, float distanceFactor) {
         {
             AbstractArrow arrow = new Arrow(EntityType.ARROW, this.level());
-            double d0 = target.getX() - this.getX();
-            double d1 = target.getY(0.33333) - arrow.getY();
-            double d2 = target.getZ() - this.getZ();
-            double d3 = Math.sqrt(d0 * d0 + d2 * d2);
-            arrow.shoot(d0, d1 + d3 * 0.2F, d2, 1.6F, (float) (2));
+
+            arrow.setPos(this.getX(),this.getEyeY() - 0.1,this.getZ());
+            double dx = target.getX() - this.getX();
+            double dy = target.getY(0.33333) - arrow.getY();
+            double dz = target.getZ() - this.getZ();
+            double dist = Math.sqrt(dx * dx + dz * dz);
+
+            arrow.shoot(dx, dy + dist * 0.2F, dz, 1.6F, 4.0F);
+//            double d0 = target.getX() - this.getX();
+//            double d1 = target.getY(0.33333) - arrow.getY();
+//            double d2 = target.getZ() - this.getZ();
+//            double d3 = Math.sqrt(d0 * d0 + d2 * d2);
+//            arrow.shoot(d0, d1 + d3 * 0.2F, d2, 1.6F, (float) (2));
             this.playSound(SoundEvents.DISPENSER_LAUNCH, 1.0F, 1.0F);
             this.level().addFreshEntity(arrow);
 
