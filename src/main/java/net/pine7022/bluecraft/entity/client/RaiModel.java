@@ -22,6 +22,8 @@ public class RaiModel<T extends RaiEntity> extends HierarchicalModel<T> {
     public RaiModel(ModelPart root) {
         this.body = root.getChild("body");
         this.head = root.getChild("head");
+        this.Left_Leg = root.getChild("Left_Leg");
+        this.Right_Leg = root.getChild("Right_leg");
     }
 
     public static LayerDefinition createBodyLayer() {
@@ -94,6 +96,8 @@ public class RaiModel<T extends RaiEntity> extends HierarchicalModel<T> {
     public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int color) {
         body.render(poseStack, vertexConsumer, packedLight, packedOverlay, color);
         head.render(poseStack, vertexConsumer, packedLight, packedOverlay, color);
+        Left_Leg.render(poseStack, vertexConsumer, packedLight, packedOverlay, color);
+        Right_Leg.render(poseStack, vertexConsumer, packedLight, packedOverlay, color);
     }
 
     @Override
